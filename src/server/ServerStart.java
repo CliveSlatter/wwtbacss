@@ -30,7 +30,7 @@ public class ServerStart {
             e.printStackTrace();
         } finally {
             server.destroy();
-            DatabaseConnection.open("MessageBoard.db");
+            DatabaseConnection.open("wwtbacss.db");
         }
     }
 }

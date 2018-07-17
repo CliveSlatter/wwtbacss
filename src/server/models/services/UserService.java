@@ -86,7 +86,7 @@ public class UserService {
             statement.setString(2, itemToSave.getUsername());
             statement.setString(3, itemToSave.getHashPassword());
             statement.setString(4, itemToSave.getSessionToken());
-
+            Console.log(itemToSave.getHashPassword());
 
 
 

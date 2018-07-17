@@ -3,7 +3,7 @@ function resetLoginForm() {
     loginForm.submit(event => {
         event.preventDefault();
         $.ajax({
-            url: '/user/login',
+            url: '/user/game',
             type: 'POST',
             data: loginForm.serialize(),
             success: response => {
@@ -11,7 +11,7 @@ function resetLoginForm() {
                     alert(response);
                 } else {
                     Cookies.set("sessionToken", response);
-                    window.location.href = "/client/index.html";
+                    window.location.href = "/client/game.html";
                 }
             }
         });
@@ -31,7 +31,7 @@ function resetNewUserForm() {
                     alert(response);
                 } else {
                     Cookies.set("sessionToken", response);
-                    window.location.href = "/client/index.html";
+                    window.location.href = "/client/game.html";
                 }
             }
         });
@@ -40,9 +40,7 @@ function resetNewUserForm() {
 
 function pageLoad() {
     resetLoginForm();
-    resetNewUserForm();
+   resetNewUserForm();
 }
 
-function hello(){
 
-}

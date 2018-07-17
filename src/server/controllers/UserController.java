@@ -43,7 +43,7 @@ public class UserController {
     @Path("login")
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     @Produces(MediaType.TEXT_PLAIN)
-    public String existingUser(@FormParam("username") String username,
+    public String newUser(@FormParam("username") String username,
                              @FormParam("password") String password ) {
 
         Console.log("/user/login - Attempt by " + username);
